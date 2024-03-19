@@ -1,0 +1,29 @@
+:root{
+    --fondo:#d87093;
+}
+.bg-pink{
+    background-color:var(--fondo);
+}
+
+nav .form-control{
+    border-radius: 0;
+    border:none;
+    border-bottom: 5px solid rgb(162, 30, 74);
+}
+
+.img-fluid.float-right {
+    opacity: 0.5;
+    border: 1px solid black;
+}
+
+.btn-danger {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 1px solid black;
+    color: black;
+}
+
+.btn-danger:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    border: 1px solid black;
+    color: black;
+}
