@@ -7,24 +7,31 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="regresar-button">
+        <button class="back-bttn" onclick="location.href='index.html'"><span class="bttn-txt">Regresar</span></button>
+    </div>
     <div class="all">
         <div class="div-login">
-            <div>
-                
-            </div>
             <form action="" autocomplete="off">
                 <section>
+                    <div>
+                        <label class="inicio">Iniciar Sesión</label>
+                    </div>
                     <div class="form-group" >
-                        <input type="text" placeholder="Nombre completo">
+                        <input type="text" placeholder="Usuario">
                         <label class="form-label">Usuario</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Contraseña">
                         <label class="form-label">Contraseña</label>
+                    </div>
+                    <div>
+                        <button type="submit" class="login-bttn"><span class="bttn-txt">Entrar</span></button>
                     </div>
                 </section>
             </form>
         </div>
+        <div class="logo"></div>
     </div>
 </body>
 </html>
