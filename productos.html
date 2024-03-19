@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,73 +8,113 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <title>Inventario</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add custom CSS -->
+    <style>
+        .btn-outline-dark {
+            color: black;
+            border-color: black;
+        }
+
+        /* Estilos para centrar los elementos de la parte superior */
+        .navbar-brand-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            background-color: #ccffcc;
+        }
+
+        .top-elements-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ccffcc;
+        }
+
+        .navbar-toggler {
+            font-size: 1.5rem;
+            /* Tamaño del icono de hamburguesa */
+        }
+
+        .title-container {
+            margin-left: 10px;
+            /* Ajuste de margen izquierdo para el título */
+        }
+    </style>
 </head>
+
 <body style="background-color: #ccffcc;">
-    <div class="container">
-        <div class="row align-items-center justify-content-center" style="height: 100px;">
-            <div class="col-md-3 text-center">
-                <img src="IMG\3 lineas.png" alt="Rayas" class="img-fluid" style="max-height: 80px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid top-elements-container">
+            <!-- Contenedor del botón de hamburguesa -->
+            <div class="d-flex align-items-center">
+                <!-- Botón de hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Icono de hamburguesa -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú desplegable -->
+                <div class="collapse navbar-collapse me-auto" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <!-- Icono de hamburguesa -->
+                                <span class="navbar-toggler-icon"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Perdidas</a></li>
+                                <li><a class="dropdown-item" href="#">Horarios</a></li>
+                                <li><a class="dropdown-item" href="#">Empleados</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3 text-center">
+            <!-- Contenedor de la marca del navbar -->
+            <div class="navbar-brand-container">
                 <img src="IMG\Logo chekos.png" class="img-fluid" style="max-height: 150px;">
             </div>
-            <div class="col-md-3 text-center">
-                <h1>Productos</h1>
+            <!-- Título de Productos -->
+            <div class="col-md-6 text-center">
+                <h1 class="title-container">Productos</h1>
             </div>
-            <div class="col-md-3 text-center">
+            <!-- Botón de regresar -->
+            <div>
                 <a href="#" class="btn btn-outline-dark">Regresar</a>
             </div>
         </div>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-3 text-center">
-                <div class="card" style="border: none; background: transparent;">
-                    <div class="card-body">
-                        <h5 class="card-title">Periodo</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card" style="border: none; background: transparent;">
-                    <div class="card-body">
-                        <select class="form-control">
-                            <option>1 mes</option>
-                            <option>3 meses</option>
-                            <option>6 meses</option>
-                            <option>12 meses</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card">
-                    <div class="card-body">
-                        <button type="button" class="btn btn-primary">Modificar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card">
-                    <div class="card-body">
-                        <img src="IMG\icono buscar.png" alt="Buscar" style="max-height: 30px;">
-                    </div>
-                </div>
-            </div>
+    </nav>
+    <div class="container">
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-3 text-center">
+            <h5>Periodo:</h5>
         </div>
-        <div class="row align-items-center justify-content-center">
-            <div class="col-md-6 offset-md-3 text-center">
-                <div class="card">
-                    <div class="card-body">
-                        <button type="button" class="btn btn-success">Agregar Producto</button>
-                    </div>
-                </div>
+        <div class="col-md-1 text-center">
+            <select class="form-control">
+                <option>1 mes</option>
+                <option>3 meses</option>
+                <option>6 meses</option>
+                <option>12 meses</option>
+            </select>
+        </div>
+        <div class="col-md-3 text-center">
+            <button type="button" class="btn btn-primary">Modificar</button>
+        </div>
+        <div class="col-md-3 text-center">
+            <div class="col-md3 offset-md-3 text-center">
+                <button type="button" class="btn btn-success">Agregar Producto</button>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <table class="table table-bordered">
                     <thead class="thead-light">
-                        <tr>
+                        <tr style="background-color: #aaa49e;">
                             <th>Nombre</th>
                             <th>Proveedor</th>
                             <th>Cantidad</th>
@@ -104,11 +145,13 @@
             </div>
         </div>
     </div>
-    <style>
-        .btn-outline-dark {
-            color: black;
-            border-color: black;
-        }
-    </style>
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Add custom JS -->
+    <script>
+        // Add your custom JavaScript code here
+    </script>
 </body>
+
 </html>
